@@ -1,11 +1,12 @@
 module.exports = function getZerosCount(number) {
     let temp =  0;
     let res = 0;
-  
-    for (let index = 5; index <= 9765625; index*5) {
+    let index=5;
+   while(index<=9765625) {
         
         temp = Math.floor(number / index);
         res += temp;
+       index= index*5;
     }
     if (number >= 48828125) {
         temp = Math.floor(number / 48828125);
